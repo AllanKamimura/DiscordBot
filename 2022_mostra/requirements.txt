@@ -1,0 +1,3 @@
+discord.py
+unidecode
+wit

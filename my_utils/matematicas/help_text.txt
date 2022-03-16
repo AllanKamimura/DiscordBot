@@ -1,7 +1,0 @@
-o Método dos Mínimos Quadrados (MMQ) é utilizado em práticas laboratoriais, quando se deseja calcular determinada grandeza utilizando regressão linear.
-
-**Como Utilizar: **
-**`loli mmq`** a primeira linha, deve conter a chamada pro bot
-**Nome da tabela** a segunda linha, contem o nome a ser dado à tabela
-**n = número** a terceira linha é o número de medidas na tabela
-daqui pra baixo, vc so copia e cola os dados da tabela, incluindo a linha com o nome das grandezas.
