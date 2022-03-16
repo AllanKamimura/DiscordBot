@@ -41,10 +41,11 @@ async def on_ready():
 #		category = main_guild.get_channel(cat_dict[category_name]["category"])
 #		await category.edit(position = i + 1)
 		
+## set roles permission
 #	for role in main_guild.roles:
 #		roles[role.name] = role.id
 #		
-##		print('"{:<44}": {},'.format(role.name, role.id))
+# 		print('"{:<44}": {},'.format(role.name, role.id))
 #		if role.name in ["@everyone", "LiLo-bot", "novo cargo", "Organizadores"]:
 #			pass
 #		else:
@@ -77,6 +78,8 @@ async def on_ready():
 #				)
 #			)
 #			
+
+## set channel permissions
 #	for category in main_guild.categories:
 #		cat_dict[category.name] = category.id
 ##		if category.name not in roles.keys():
@@ -116,6 +119,8 @@ async def on_ready():
 ##			)
 ##
 ##
+
+## missing channels (before create channels with role)
 ##			if len(category.channels) < 4:
 ##				channel_names = [channel.name for channel in category.channels]
 ##				if "backstage" not in channel_names:
@@ -216,7 +221,7 @@ async def on_ready():
 ##				
 ##			
 
-
+## fiter channels
 #	title = "Filtro Preto"
 #	description = "Apenas o canal da sua extra ficara visivel para voce\n" 
 #
@@ -337,7 +342,8 @@ async def on_message(message):
 
 		await message.delete()
 		
-		
+
+# reaction-based self-role
 @client.event
 async def on_raw_reaction_add(payload):
 	if payload.message_id in [947341703440904232, 947341705420623872]:
@@ -382,7 +388,7 @@ async def on_raw_reaction_remove(payload):
 			
 		await member.remove_roles(role)
 			
-			
+# auto create role channels and set basic permissions
 @client.event
 async def on_guild_role_create(role):
 	if role.guild == main_guild:
